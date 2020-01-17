@@ -7,8 +7,8 @@ namespace MethodExercise
         static void Main(string[] args)
         {
             Questions();
-            Console.WriteLine(Sum(3, 2, 54, 66, 31));
-            Console.WriteLine(Multiply(4 ,2, 5));
+            Sum(3, 2, 54, 66, 31);
+            Multiply(4, 2, 5);
         }
 
         public static void Questions()
@@ -25,24 +25,24 @@ namespace MethodExercise
             Console.WriteLine($"My name is {name}. I have a dream of riding a {color} {animal} while listening to {band}.");
         }
 
-        public static int Sum(params int[] list)
+        public static void Sum(params int[] list)
         {
             var sum = 0;
             for (int i = 0; i < list.Length; i++)
             {
                 sum += list[i];
             }
-            return sum;
+            Console.WriteLine(sum);
         }
 
-        public static int Multiply(params int[] list)
+        public static void Multiply(params int[] list)
         {
             int answer = 1;
             for (int i = 0; i < list.Length; i++)
             {
                 answer *= list[i];
             }
-            return answer;
+            Console.WriteLine(answer);
         }
     }
 }
